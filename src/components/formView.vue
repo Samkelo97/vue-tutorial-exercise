@@ -1,6 +1,6 @@
 <template>
     <h2> Text input</h2>
-    <input v-model="Text">{{ text }}
+    <input v-model="text">{{ text }}
     <h2>Checkbox</h2>
     <input type="checkbox" id="checkbox" v-model="checked">
     <label for="checkbox">checked:{{ checked }}</label>

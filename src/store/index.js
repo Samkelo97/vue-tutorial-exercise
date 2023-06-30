@@ -17,14 +17,14 @@ export default createStore({
     },
   },
   actions: {
-    getTutorials:async(context) => {
-      fetch("http://localhost:3000/tutorials")
-      .then((res) => res.json())
-      .then((tutorials) => context.commit("setTutorials",tutorials));
+    getTutorials:async function (context) {
+      fetch("https://Samkelo97.github.io/data/db.json")
+        .then((res) => res.json())
+        .then((tutorials) => context.commit("setTutorials", tutorials));
     },
     
     getTutorial:async(context, id) => {
-      fetch("http//localhost:3000/tutorials/" + id)
+      fetch("https://Samkelo97.github.io/data/db.json/" + id)
       .then((res) => res.json())
       .then((tutorial) => context.commit("setTutorial",tutorial));
     },
